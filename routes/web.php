@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', 'PostController@index')->name('post.index');
+Route::get('/asdasd', 'MainController@index')->name('witch.index');
 Route::get('/about', 'MainController@about')->name('witch.about');
 Route::get('/recipes', 'MainController@recipes')->name('witch.recipes');
 Route::post('/question', 'MainController@ask')->name('witch.ask');

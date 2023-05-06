@@ -40,9 +40,10 @@ class MainController extends Controller
                 $headers .= "X-Mailer: PHP/ " . phpversion();
 
                 mail($to, $subject, $message, $headers);
-                return redirect()->route('witch.index');
+
 
             }
         }
+        return redirect()->route('witch.index');
     }
 }
