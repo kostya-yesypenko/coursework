@@ -21,7 +21,7 @@ Route::get('/about', 'MainController@about')->name('witch.about');
 Route::get('/recipes', 'MainController@recipes')->name('witch.recipes');
 Route::post('/question', 'MainController@ask')->name('witch.ask');
 Route::get('/welcome', function () {
-    return view('welcome');
+    return '1';
 });
 
 Route::get('/posts', 'PostController@index')->name('post.index');
