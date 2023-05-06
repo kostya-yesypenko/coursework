@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
 
@@ -15,8 +16,10 @@ class MainController extends Controller
         return view('witch/witch_about');
     }
 
-    public function recipes() {
-        return view('witch/witch_recipes');
+    public function test()
+    {
+        $posts = Post::all();
+        return view('recipes', compact('posts'));
     }
     public function ask() {
         if(isset($_POST["form_submit"])){

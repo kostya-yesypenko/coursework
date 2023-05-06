@@ -17,20 +17,20 @@
             <form action="{{ route('post.store') }}" method="post">
                 @csrf
                 <div>
-                    <label for="title">Title </label>
+                    <label for="title">Назва</label>
                     <input type="text" name="title" placeholder="Type title", id="title">
                 </div>
 
                 <div>
-                    <label for="content">Content </label>
+                    <label for="content">Опис</label>
                     <textarea name="content" id="content" placeholder="Type content"></textarea>
                 </div>
 
                 <div>
-                    <label for="image">Image </label>
+                    <label for="image">Фото</label>
                     <input type="text" name="image" placeholder="Type image", id="image">
                 </div>
-                <button class="button" type="submit" style="margin-top: 2.5em;">Create</button>
+                <button class="button" type="submit" style="margin-top: 2.5em;">Створити</button>
             </form>
         </div>
     </div>

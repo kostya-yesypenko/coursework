@@ -16,10 +16,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/asdasd', 'MainController@index')->name('witch.index');
+Route::get('/', 'MainController@index')->name('witch.index');
 Route::get('/about', 'MainController@about')->name('witch.about');
 Route::get('/recipes', 'MainController@recipes')->name('witch.recipes');
 Route::post('/question', 'MainController@ask')->name('witch.ask');
+Route::get('/test', 'MainController@test')->name('witch.test');
+
+
+
 
 
 Route::get('/posts', 'PostController@index')->name('post.index');

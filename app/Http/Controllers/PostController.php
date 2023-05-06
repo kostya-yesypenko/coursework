@@ -34,12 +34,7 @@ class PostController extends Controller
 //        $request->session()->put('user', 'iesypenko');
         return view('post.index', compact('posts'));
     }
-    public function rec()
-    {
-        $posts = Post::all();
-        dd(1);
-        return view('recipes', compact('posts'));
-    }
+
 
     public function create()
     {
