@@ -9,18 +9,15 @@ use Illuminate\Support\Facades\Cookie;
 class MainController extends Controller
 {
     public function index() {
-        return view('witch/witch_main');
+        $posts = Post::all()->all();
+        return view('witch/witch_main', compact('posts'));
     }
 
     public function about() {
         return view('witch/witch_about');
     }
 
-    public function test()
-    {
-        $posts = Post::all();
-        return view('recipes', compact('posts'));
-    }
+
     public function ask() {
         if(isset($_POST["form_submit"])){
             // отримання даних

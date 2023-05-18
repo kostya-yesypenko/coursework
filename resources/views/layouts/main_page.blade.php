@@ -9,7 +9,7 @@
     <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
     </head>
     <body>
-        <nav>
+        <div class="navi">
             <div class="name">
                 <a href="{{ route('witch.index') }}" class="logo"><img src="{{ asset('images/recipe-keeper.svg') }}"></a>
                 <p >ВІДЬОМСЬКІ РЕЦЕПТИ</p>
@@ -19,14 +19,13 @@
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="{{ route('witch.index') }}">ГОЛОВНА</a></li>
-                    <li><a href="{{ route('witch.recipes') }}">РЕЦЕПТИ</a></li>
-                    <li><a href="">МАГАЗИН</a></li>
+                    <li><a href="{{ route('post.index') }}">РЕЦЕПТИ</a></li>
+                    <li><a href="">КНИГИ</a></li>
                     <li><a href="{{ route('witch.about') }}">ПРО НАС</a></li>
-                    <li><a href=""><i class="fa fa-shopping-cart"></i></a></li>
                 </ul>
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
-        </nav>
+        </div>
 
         <!--------Javascript for Toggle Menu---------->
         <script>

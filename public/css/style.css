@@ -9,7 +9,7 @@ body{
 
 }
 
-nav{
+.navi{
 	display: flex;
 	margin: 3% 13% 77px ;
 	justify-content: space-between;
@@ -53,14 +53,14 @@ nav{
 .nav-links ul li a{
 	text-decoration: none;
 	color:rgba(176, 113, 86, 1);
-	font-size: 1vw;
+	font-size: 18px;
 	line-height: 20px;
 }
 
-nav .fa{
+.navi .fa{
 	display: none;
 }
-nav .fa-shopping-cart{
+.navi .fa-shopping-cart{
 	font-size: 1.5em;
 	color: rgba(176, 113, 86, 1);
 	display: block;
@@ -96,7 +96,7 @@ nav .fa-shopping-cart{
 	margin: 10px 0 20px;
 }
 .hr-lines span {
-	font-size: 2vw;
+	font-size: 32px;
 	color:rgba(176, 113, 86, 1);
     background:rgba(250, 240, 213, 1);
     padding:0 20px;
@@ -133,6 +133,7 @@ hr {
 	background-color: rgba(250, 240, 213, 1);
 }
 .creator-info h2{
+    text-transform: uppercase;
 	padding-top: 29px;
 	line-height: 40px;
 	font-size: 36px;
@@ -140,6 +141,7 @@ hr {
 	text-align: center;
 	color: rgba(176, 113, 86, 1);
 }
+
 .creator-info h3{
 	padding-top: 14px;
 	line-height: 30px;
@@ -149,12 +151,18 @@ hr {
 	color: rgba(176, 113, 86, 1);
 }
 .creator-info p{
-	padding:14px 39px 29px;
+	padding:20px 39px;
 	line-height: 30px;
-	font-size: 18px;
+	font-size: 20px;
 	font-weight:normal;
 	text-align: center;
 	color: rgba(176, 113, 86, 1);
+}
+.creator-info.book{
+    border-style: none;
+    width: 50%;
+    top: 30%;
+    left: 25%;
 }
 .follow{
 	list-style: none;
@@ -210,7 +218,7 @@ hr {
 	padding: 2% 0px;
 	justify-content: space-between;
 	align-items: center;
-	font-size: 1.2vw;
+	font-size: 1.4vw;
 	font-weight: bold;
 	font-family: Arial, sans-serif;
 	text-align: center;
@@ -224,7 +232,7 @@ hr {
 .about-recipes{
 	margin: 36px 13%;
 	text-align: center;
-	font-size: 1.7vw;
+	font-size: 24px;
 	line-height: 30px;
 	font-family: Arial, sans-serif;
 	color: rgba(176, 113, 86, 1);
@@ -255,7 +263,7 @@ hr {
 	padding: 0.6rem 1rem;
 	text-decoration: none;
 	color:rgba(176, 113, 86, 1);
-	font-size: 1vw;
+	font-size: 16px;
 	font-family: Arial, sans-serif;
 	font-weight: bold;
 	line-height: 20px;
@@ -294,6 +302,11 @@ hr {
 	max-width:90%;
 	height:fit-content;
 }
+.food-gallery.book{
+    position: relative;
+    max-width: 74%;
+    margin: 0 13%;
+}
 .container{
 	position: relative;
 	display:flex;
@@ -313,13 +326,13 @@ div.gallery:hover {
 
 div.gallery img {
 	width: 100%;
-	height: auto;
+	height: 13vw;
 	border-radius: 5px;
   }
 
 div.desc {
 	padding: 0% 3%;
-	font-size: 1vw;
+	font-size: 16px;
 	font-weight: bold;
 	font-family: Arial, sans-serif;
 	text-align: left;
@@ -330,6 +343,10 @@ div.desc {
   }
 .btn.btn1{
 	text-align: left;
+}
+.btn.btn2{
+    text-align: center;
+    margin-bottom: 14px;
 }
 .btn1 button{
 	padding: 20px 30px;
@@ -369,7 +386,7 @@ div.desc {
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
-	font-size: 1vw;
+	font-size: 16px;
 	font-weight: bold;
 	cursor: pointer;
 	-webkit-transition-duration: 0.4s;
@@ -462,23 +479,63 @@ input[type=text], select, textarea {
       justify-content: center;
       margin: 0 30%;
   }
+ .food-info{
+     color: rgba(176, 113, 86, 1);
+     text-align: center;
+     position: relative;
+     margin: 30px 20%;
+     height: fit-content;
+}
+.food-info img{
+    width:60%;
+}
+.food-info h2{
+    padding-top: 29px;
+    line-height: 40px;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    color: rgba(176, 113, 86, 1);
+}
+.food-info p{
+    padding:14px 39px 29px;
+    line-height: 30px;
+    font-size: 18px;
+    font-weight:normal;
+    text-align: center;
+    color: rgba(176, 113, 86, 1);
+}
+.pagination{
+    text-align: center;
+    margin-bottom: 33px;
 
+}
+.pagination a{
+    text-decoration: none;
+    color: rgba(176, 113, 86, 1);
+    padding: 10px 15px;
+    border-radius: 5px;
+ }
+.item.active{
+    background-color: rgba(176, 113, 86, 1);
+    color: rgba(250, 240, 213, 1);
 
+}
 
 
 @media(max-width:900px){
 
-	nav .fa{
+	.navi .fa{
 		display: block;
 		color: rgba(250, 240, 213, 1);
 		margin: 10px;
 		cursor: pointer;
 	}
-	nav .fa-shopping-cart{
+	.navi .fa-shopping-cart{
 		margin: 0;
 		color: rgba(250, 240, 213, 1);
 	}
-	nav .fa-bars{
+	.navi .fa-bars{
 		color: rgba(176, 113, 86, 1);
 	}
 	.nav-links ul{
@@ -560,7 +617,9 @@ input[type=text], select, textarea {
 	  margin-bottom: 5%;
 
 	}
-
+    div.gallery img{
+        height: 20vw;
+    }
 
   }
 
@@ -571,6 +630,9 @@ input[type=text], select, textarea {
 		margin-bottom: 7%;
 		padding: 0;
 	}
+    div.gallery img{
+        height: 100%;
+    }
 }
 
 @media (max-width: 1000px) {

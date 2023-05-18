@@ -27,7 +27,7 @@
                 </div>
 
                 <div>
-                    <label for="image">Фото</label>
+                    <label for="image">Зображення</label>
                     <input type="text" name="image" placeholder="Type image", id="image">
                 </div>
                 <button class="button" type="submit" style="margin-top: 2.5em;">Створити</button>

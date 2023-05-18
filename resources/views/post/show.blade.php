@@ -1,22 +1,25 @@
+@extends('layouts.main_page')
+@section('content')
+    <title>{{ $post->title }}</title>
+    <hr>
 
-    <div>
-        <div>{{ $post->id }}. {{ $post->title }}</div>
-        <div>{{ $post->content }}</div>
-        <div>{{ $post->category->title }}</div>
-
+        <div class="food-info">
+            <img src="{{ asset('images/'.$post->image) }}" alt="{{$post->title}}">
+            <h2>{{ $post->title }}</h2>
+            <p>{{$post->content}}</p>
+        </div>
     </div>
+    <hr>
+
     <div>
         <a href="{{route('post.edit', $post->id)}}">Edit</a>
     </div>
-    <div>
-        <form action="{{ route('post.delete', $post->id )}}" method="post">
-            @csrf
-            @method('delete')
-            <input type="submit" value="Delete">
-        </form>
-    </div>
 
     <div>
-        <a href="{{ route('post.index') }}">Back</a>
+        <a href="{{ route('post.index') }}">Back to the recipes</a>
     </div>
+@endsection
+
+
+
 

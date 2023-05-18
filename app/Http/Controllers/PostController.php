@@ -15,24 +15,14 @@ class PostController extends Controller
 {
     public function index()
     {
-   //     $post = Post::getLatestPost();
-//        $category = Category::find(1);
-//        $post = Post::getLatestPost(1);
-     //   dd($post);
-//        $tags = Tag::find(1);
-//   //     Log::info($post->category);
-//        dd($tags->posts);
-        $posts = Post::all();
-//        $category= category::find(1)
-       // $category = Category::find($post->category_id);
-//        dd($category->posts);
-
-//        $posts = Post::all();
-//        dd($category->posts);
-//        dd($category);
-
-//        $request->session()->put('user', 'iesypenko');
-        return view('post.index', compact('posts'));
+        $posts = Post::paginate(4);
+        $l = Post::paginate(4)->all();
+        $n = 4;
+        $chunks = array();
+        for ($i = 0; $i < count($l); $i += $n) {
+            $chunks[] = array_slice($l, $i, $n);
+        }
+        return view('witch.witch_recipes', compact('chunks', 'posts'));
     }
 
 

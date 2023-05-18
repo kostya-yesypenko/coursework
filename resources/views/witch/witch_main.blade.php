@@ -10,7 +10,7 @@
 				<p class="call about-main3">Відьомські рецепти - це Ваш онлайн-помічник, який допоможе здивувати ваших рідних
 					та друзів незабутніми стравами. З нами готувати легко!</p>
 					<div class="btn btn1">
-                        <a href="{{ route('witch.recipes') }}"><button class="button">Дивитися Рецепти</button></a>
+                        <a href="{{ route('post.index') }}"><button class="button">Дивитися Рецепти</button></a>
 					</div>
 			</div>
 				<div class="food-gallery">
@@ -23,148 +23,66 @@
 	</div>
 	<div class="site-best">Найкраще на сайті :</div>
 	<div class="container">
+        @for ($i=2; $i<6; $i++)
+
 		<div class="responsive">
 			<div class="gallery">
-				<a target="_blank" href="{{ asset('images/Banana-Pancakes.webp') }}">
-				<img src="{{ asset('images/Banana-Pancakes.webp') }}" alt="Cinque Terre" width="600" height="400">
+				<a target="" href="{{ route('post.show', $posts[$i]->id) }}">
+				<img src="images/{{ $posts[$i]->image }}" alt="Cinque Terre" width="600" height="400">
 				</a>
 				<div class="desc">
-					<div class="food-type">Сніданки</div>
-					<div class="food-name">Бананові млинці</div>
+					<div class="food-type">{{ $posts[$i]->category->title }}</div>
+					<div class="food-name">{{ $posts[$i]->title }}</div>
 					<div class="timer">
 						<i class="fa fa-clock-o"></i>
-						<span>30 хв</span>
+						<span>{{ $posts[$i]->time }} хв</span>
 					</div>
 				</div>
 			</div>
 		</div>
-
-
-		<div class="responsive">
-			<div class="gallery">
-				<a target="_blank" href="../../../../../html5/Coursework/images/Blueberry-Muffin.webp">
-				<img src="../../../../../html5/Coursework/images/Blueberry-Muffin.webp" alt="Forest" width="600" height="400">
-				</a>
-				<div class="desc">
-					<div class="food-type">Сніданки</div>
-					<div class="food-name">Бананові млинці</div>
-					<div class="timer">
-						<i class="fa fa-clock-o"></i>
-						<span>30 хв</span>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="responsive">
-			<div class="gallery">
-				<a target="_blank" href="../../../../../html5/Coursework/images/French-Omlette.webp">
-				<img src="../../../../../html5/Coursework/images/French-Omlette.webp" alt="Northern Lights" width="600" height="400">
-				</a>
-				<div class="desc">
-					<div class="food-type">Сніданки</div>
-					<div class="food-name">Бананові млинці</div>
-					<div class="timer">
-						<i class="fa fa-clock-o"></i>
-						<span>30 хв</span>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="responsive">
-			<div class="gallery">
-				<a target="_blank" href="../../../../../html5/Coursework/images/Microwave-Bacon.webp">
-				<img src="../../../../../html5/Coursework/images/Microwave-Bacon.webp" alt="Mountains" width="600" height="400">
-				</a>
-				<div class="desc">
-					<div class="food-type">Сніданки</div>
-					<div class="food-name">Бананові млинці</div>
-					<div class="timer">
-						<i class="fa fa-clock-o"></i>
-						<span>30 хв</span>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+        @endfor
+    </div>
 
 	<div class="clearfix"></div>
 	<div class="site-best">Найпопулярніше :</div>
 	<div class="container">
-		<div class="responsive">
-			<div class="gallery">
-				<a target="_blank" href="../../../../../html5/Coursework/images/Banana-Pancakes.webp">
-				<img src="../../../../../html5/Coursework/images/Banana-Pancakes.webp" alt="Cinque Terre" width="600" height="400">
-				</a>
-				<div class="desc">
-					<div class="food-type">Сніданки</div>
-					<div class="food-name">Бананові млинці</div>
-					<div class="timer">
-						<i class="fa fa-clock-o"></i>
-						<span>30 хв</span>
-					</div>
-				</div>
-			</div>
-		</div>
+        @for ($i=0; $i<4; $i++)
+            <div class="responsive">
+                <div class="gallery">
+                    <a target="" href="{{ route('post.show', $posts[$i]->id) }}">
+                        <img src="images/{{ $posts[$i]->image }}" alt="Cinque Terre" width="600" height="400">
+                    </a>
+                    <div class="desc">
+                        <div class="food-type">{{ $posts[$i]->category->title }}</div>
+                        <div class="food-name">{{ $posts[$i]->title }}</div>
+                        <div class="timer">
+                            <i class="fa fa-clock-o"></i>
+                            <span>{{ $posts[$i]->time }} хв</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endfor
+    </div>
 
 
-		<div class="responsive">
-			<div class="gallery">
-				<a target="_blank" href="../../../../../html5/Coursework/images/Blueberry-Muffin.webp">
-				<img src="../../../../../html5/Coursework/images/Blueberry-Muffin.webp" alt="Forest" width="600" height="400">
-				</a>
-				<div class="desc">
-					<div class="food-type">Сніданки</div>
-					<div class="food-name">Бананові млинці</div>
-					<div class="timer">
-						<i class="fa fa-clock-o"></i>
-						<span>30 хв</span>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="responsive">
-			<div class="gallery">
-				<a target="_blank" href="../../../../../html5/Coursework/images/French-Omlette.webp">
-				<img src="../../../../../html5/Coursework/images/French-Omlette.webp" alt="Northern Lights" width="600" height="400">
-				</a>
-				<div class="desc">
-					<div class="food-type">Сніданки</div>
-					<div class="food-name">Бананові млинці</div>
-					<div class="timer">
-						<i class="fa fa-clock-o"></i>
-						<span>30 хв</span>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="responsive">
-			<div class="gallery">
-				<a target="_blank" href="../../../../../html5/Coursework/images/Microwave-Bacon.webp">
-				<img src="../../../../../html5/Coursework/images/Microwave-Bacon.webp" alt="Mountains" width="600" height="400">
-				</a>
-				<div class="desc">
-					<div class="food-type">Сніданки</div>
-					<div class="food-name">Бананові млинці</div>
-					<div class="timer">
-						<i class="fa fa-clock-o"></i>
-						<span>30 хв</span>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="call">
 		<div class="food-gallery book">
 			<img src="{{ asset('images/Epi-FallCookbooks-Web.webp') }}" alt="books for sale">
-		</div>
-	</div>
 
-	<div class="clearfix"></div>
+            <div class="clearfix"></div>
+            <div class="creator-info book">
+                <h2>Кулінарна Книга</h2>
+                <p>
+                    Містить сотні рецептів від світових шеф-кухарів.<br>
+                Замов прямо зараз лише за 300 грн!
+                </p>
+                <div class="btn btn2">
+                    <a href="{{ route('post.index') }}"><button class="button">Замовити книгу</button></a>
+                </div>
+            </div>
+
+		</div>
+
 
 	<div class="form-container">
 		<form action="{{ route('witch.ask') }}" method="post">

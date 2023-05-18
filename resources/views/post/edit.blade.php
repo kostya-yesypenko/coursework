@@ -35,5 +35,8 @@
             <button type="submit">update</button>
         </form>
     </div>
+    <div>
+        <a href="{{ route('post.show',$post->id) }}">Back</a>
+    </div>
 
 @endsection
