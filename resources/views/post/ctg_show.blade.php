@@ -1,11 +1,8 @@
 @extends('layouts.main_page')
 @section('content')
-    <title>Рецепти</title>
+    <title>{{ $category->title }}</title>
 
-    <h1 class="hr-lines"><span>РЕЦЕПТИ & КУЛІНАРНІ ІДЕЇ</span></h1>
-    <p class="about-recipes">
-        Наші найкращі рецепти, розроблені та перевірені, щоб допомогти Вам приготувати чудову сімейну їжу.
-    </p>
+    <h1 class="hr-lines" style="margin-bottom: 40px;"><span>{{ $category->title }}</span></h1>
     <div class="quick-find">
         <div class="quick-links">
             <ul>
@@ -23,7 +20,7 @@
                 <div class="responsive">
                     <div class="gallery">
                         <a target="" href="{{ route('post.show', $chunk[$i]->id) }}">
-                            <img src="images/{{ $chunk[$i]->image }}" alt="Cinque Terre" width="600" height="400">
+                            <img src="{{ asset('images/'.$chunk[$i]->image)}}" alt="Cinque Terre" width="600" height="400">
                         </a>
                         <div class="desc">
                             <div class="food-type"><a href="{{ route('post.ctg_show', $chunk[$i]->category->id) }}">{{ $chunk[$i]->category->title }}</a></div>

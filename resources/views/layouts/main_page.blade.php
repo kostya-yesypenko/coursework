@@ -20,7 +20,7 @@
                 <ul>
                     <li><a href="{{ route('witch.index') }}">ГОЛОВНА</a></li>
                     <li><a href="{{ route('post.index') }}">РЕЦЕПТИ</a></li>
-                    <li><a href="">КНИГИ</a></li>
+                    <li><a href="{{ route('witch.book') }}">КНИГИ</a></li>
                     <li><a href="{{ route('witch.about') }}">ПРО НАС</a></li>
                 </ul>
             </div>

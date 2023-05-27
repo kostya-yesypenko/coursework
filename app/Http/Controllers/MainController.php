@@ -17,6 +17,10 @@ class MainController extends Controller
         return view('witch/witch_about');
     }
 
+    public function book() {
+        return view('witch/witch_books');
+    }
+
 
     public function ask() {
         if(isset($_POST["form_submit"])){

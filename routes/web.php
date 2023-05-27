@@ -18,8 +18,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'MainController@index')->name('witch.index');
 Route::get('/about', 'MainController@about')->name('witch.about');
+Route::get('/books', 'MainController@book')->name('witch.book');
 Route::post('/question', 'MainController@ask')->name('witch.ask');
 Route::get('/posts', 'PostController@index')->name('post.index');
+Route::get('/posts/category/{category}', 'PostController@ctg_show')->name('post.ctg_show');
 Route::get('/posts/create', 'PostController@create')->name('post.create');
 Route::post('/posts', 'PostController@store')->name('post.store');
 Route::get('/posts/{post}', 'PostController@show')->name('post.show');

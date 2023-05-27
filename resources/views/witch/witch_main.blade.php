@@ -31,7 +31,7 @@
 				<img src="images/{{ $posts[$i]->image }}" alt="Cinque Terre" width="600" height="400">
 				</a>
 				<div class="desc">
-					<div class="food-type">{{ $posts[$i]->category->title }}</div>
+					<div class="food-type"><a href="{{ route('post.ctg_show', $posts[$i]->category->id) }}">{{ $posts[$i]->category->title }}</a></div>
 					<div class="food-name">{{ $posts[$i]->title }}</div>
 					<div class="timer">
 						<i class="fa fa-clock-o"></i>
@@ -53,7 +53,7 @@
                         <img src="images/{{ $posts[$i]->image }}" alt="Cinque Terre" width="600" height="400">
                     </a>
                     <div class="desc">
-                        <div class="food-type">{{ $posts[$i]->category->title }}</div>
+                        <div class="food-type"><a href="{{ route('post.ctg_show', $posts[$i]->category->id) }}">{{ $posts[$i]->category->title }}</a></div>
                         <div class="food-name">{{ $posts[$i]->title }}</div>
                         <div class="timer">
                             <i class="fa fa-clock-o"></i>
@@ -77,7 +77,7 @@
                 Замов прямо зараз лише за 300 грн!
                 </p>
                 <div class="btn btn2">
-                    <a href="{{ route('post.index') }}"><button class="button">Замовити книгу</button></a>
+                    <a href="{{ route('witch.book') }}"><button class="button">Замовити книгу</button></a>
                 </div>
             </div>
 

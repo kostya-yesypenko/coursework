@@ -4,7 +4,7 @@
 
     <h1 class="hr-lines"><span>ПРО НАС</span></h1>
 	<div class="creator">
-		<img src="images/creator.jpg" alt="Creator">
+		<img src="{{ asset('images/creator.jpg') }}" alt="Creator">
 		<div class="creator-info">
 			<h2>ЄСИПЕНКО КОСТЯНТИН</h2>
 			<h3>ЗАСНОВНИК</h3>

@@ -242,6 +242,7 @@ hr {
 	position: relative;
 	width: auto;
 	height: auto;
+    text-transform: uppercase;
 	justify-content: space-around;
 	align-items: center;
 	margin: 0 13% 33px;
@@ -314,6 +315,10 @@ hr {
 	height: fit-content;
 	margin: 33px 13% 3%;
 }
+.container a{
+    text-decoration: none;
+    color: rgba(251, 181, 44, 1);
+}
 div.gallery {
 	border: 1px solid #ccc;
 	border-radius: 5px;
@@ -346,7 +351,7 @@ div.desc {
 }
 .btn.btn2{
     text-align: center;
-    margin-bottom: 14px;
+    margin-bottom: 29px;
 }
 .btn1 button{
 	padding: 20px 30px;
@@ -498,7 +503,7 @@ input[type=text], select, textarea {
     color: rgba(176, 113, 86, 1);
 }
 .food-info p{
-    padding:14px 39px 29px;
+    padding:14px 39px 0;
     line-height: 30px;
     font-size: 18px;
     font-weight:normal;

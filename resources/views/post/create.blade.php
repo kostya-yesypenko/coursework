@@ -22,8 +22,23 @@
                 </div>
 
                 <div>
+                    <label for="ingredients">Інгредієнти</label>
+                    <textarea name="ingredients" id="ingredients" placeholder="Type ingredients"></textarea>
+                </div>
+
+                <div>
                     <label for="content">Опис</label>
                     <textarea name="content" id="content" placeholder="Type content"></textarea>
+                </div>
+
+                <div>
+                    <label for="category_id">Категорія</label>
+                    <input type="text" name="category_id" placeholder="Type category", id="category_id">
+                </div>
+
+                <div>
+                    <label for="time">Час приготування</label>
+                    <input type="text" name="time" placeholder="Type time", id="time">
                 </div>
 
                 <div>
